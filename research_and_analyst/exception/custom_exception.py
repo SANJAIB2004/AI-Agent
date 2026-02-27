@@ -55,16 +55,16 @@ class ResearchAnalystException(Exception):
 
 if __name__ == "__main__":
     # Demo-1: generic exception -> wrap
-    try:
-        a = 1 / 0
-    except Exception as e:
-        raise ResearchAnalystException("Division failed", e) from e
+    # try:
+    #     a = 1 / 0
+    # except Exception as e:
+    #     raise ResearchAnalystException("Division failed", e) from e
 
     # Demo-2: still supports sys (old pattern)
-    # try:
-    #     a = int("abc")
-    # except Exception as e:
-    #     raise ResearchAnalystException(e, sys)
+    try:
+        a = int("abc")
+    except Exception as e:
+        raise ResearchAnalystException(e, sys)
     
     
     # BaseException
